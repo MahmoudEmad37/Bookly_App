@@ -3,7 +3,7 @@ import 'package:bookly/features/home/data/datasource/home_local_datasource/home_
 import 'package:bookly/features/home/domain/entities/book_entity.dart';
 import 'package:hive/hive.dart';
 
-class HomeLocalDatasourceImpl extends HomeLocalDatasource {
+class HomeLocalDataSourceImpl extends HomeLocalDataSource {
   @override
   List<BookEntity> fetchFeaturedBooks({int pageNumber = 0}) {
     int startIndex = pageNumber * 10;

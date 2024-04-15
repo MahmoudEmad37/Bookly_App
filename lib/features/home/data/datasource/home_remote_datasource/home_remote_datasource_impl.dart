@@ -4,12 +4,11 @@ import 'package:bookly/core/resourses/constants_manager.dart';
 import 'package:bookly/features/home/data/datasource/home_remote_datasource/home_remote_datasource.dart';
 import 'package:bookly/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly/features/home/domain/entities/book_entity.dart';
-import 'package:hive/hive.dart';
 
-class HomeRemoteDatasourceImpl extends HomeRemoteDatasource {
+class HomeRemoteDataSourceImpl extends HomeRemoteDataSource {
   final ApiService apiService;
 
-  HomeRemoteDatasourceImpl(this.apiService);
+  HomeRemoteDataSourceImpl(this.apiService);
 
   @override
   Future<List<BookEntity>> fetchFeaturedBooks({pageNumber = 0}) async {
