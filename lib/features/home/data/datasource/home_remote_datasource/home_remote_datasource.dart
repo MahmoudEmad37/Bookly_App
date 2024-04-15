@@ -1,6 +1,6 @@
-import 'package:bookly/features/home/data/models/book_model/book_model.dart';
+import 'package:bookly/features/home/domain/entities/book_entity.dart';
 
 abstract class HomeRemoteDatasource {
-  Future<List<BookModel>> fetchFeaturedBooks();
-  Future<List<BookModel>> fetchNewestBooks();
+  Future<List<BookEntity>> fetchFeaturedBooks({int pageNumber = 0});
+  Future<List<BookEntity>> fetchNewestBooks();
 }
