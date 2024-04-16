@@ -28,7 +28,7 @@ class HomeRepoImpl extends HomeRepo {
       return right(booksList);
     } catch (e) {
       if (e is DioException) {
-        return left(ServerFailure.fromDiorError(e));
+        return left(ServerFailure.fromDioError(e));
       }
       return left(ServerFailure(e.toString()));
     }
@@ -46,7 +46,7 @@ class HomeRepoImpl extends HomeRepo {
       return right(booksList);
     } catch (e) {
       if (e is DioException) {
-        return left(ServerFailure.fromDiorError(e));
+        return left(ServerFailure.fromDioError(e));
       }
       return left(ServerFailure(e.toString()));
     }
