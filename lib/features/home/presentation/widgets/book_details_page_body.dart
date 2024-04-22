@@ -1,8 +1,6 @@
-import 'package:bookly/core/resourses/assets_manager.dart';
 import 'package:bookly/core/resourses/values_manager.dart';
 import 'package:bookly/features/home/presentation/widgets/book_details_section.dart';
 import 'package:bookly/features/home/presentation/widgets/custom_app_bar_book_details.dart';
-import 'package:bookly/features/home/presentation/widgets/custom_book_image.dart';
 import 'package:bookly/features/home/presentation/widgets/similar_books_section.dart';
 import 'package:flutter/material.dart';
 
