@@ -13,7 +13,7 @@ final getIt = GetIt.instance;
 Future<void> initDi() async {
   getIt.registerSingleton<ApiService>(ApiService((Dio())));
 
-  getIt.registerSingleton<HomeRepoImpl>(HomeRepoImpl(
+  getIt.registerSingleton<HomeRepo>(HomeRepoImpl(
       homeRemoteDataSource: HomeRemoteDataSourceImpl(getIt.get<ApiService>()),
       homeLocalDataSource: HomeLocalDataSourceImpl()));
 

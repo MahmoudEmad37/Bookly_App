@@ -3,7 +3,7 @@ import 'package:bookly/core/resourses/style_manager.dart';
 import 'package:bookly/core/resourses/values_manager.dart';
 import 'package:bookly/features/home/presentation/widgets/best_seller_list_view.dart';
 import 'package:bookly/features/home/presentation/widgets/custom_app_bar.dart';
-import 'package:bookly/features/home/presentation/widgets/featured_book_list_view.dart';
+import 'package:bookly/features/home/presentation/widgets/featured_books_list_view_bloc_consumer.dart';
 import 'package:flutter/material.dart';
 
 class HomePageBody extends StatelessWidget {
@@ -21,7 +21,7 @@ class HomePageBody extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: AppPadding.p30),
                 child: CustomAppBar(),
               ),
-              FeaturedBooksListView(),
+              FeaturedBooksListViewBlocConsumer(),
               SizedBox(
                 height: AppSize.s50,
               ),

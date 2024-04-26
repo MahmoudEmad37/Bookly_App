@@ -9,12 +9,20 @@ class NewsetBooksCubit extends Cubit<NewsetBooksState> {
 
   final FetchNewestdBooksUseCase newestdBooksUseCase;
 
-  Future<void> fetchNewsetBooks() async {
-    emit(NewsetBooksLoading());
-    var result = await newestdBooksUseCase.call();
+  Future<void> fetchNewsetBooks({int pageNumber = 0}) async {
+    if (pageNumber == 0) {
+      emit(NewsetBooksLoading());
+    } else {
+      emit(NewsetBooksPaginationLoading());
+    }
+    var result = await newestdBooksUseCase.call(pageNumber);
 
     result.fold((failure) {
-      emit(NewsetBooksFailure(failure.message));
+      if (pageNumber == 0) {
+        emit(NewsetBooksFailure(failure.message));
+      } else {
+        emit(NewsetBooksPaginationFailure(failure.message));
+      }
     }, (books) {
       emit(NewsetBooksSuccess(books));
     });
